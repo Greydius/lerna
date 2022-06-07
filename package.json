@@ -1,0 +1,39 @@
+{
+  "name": "paymart",
+  "version": "0.0.1",
+  "description": "Paymart monorepo. Includes marketplace with buyer cabinet & payment system, seller panel, manager panel",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "marketplace": "cd ./projects/marketplace && npm run dev",
+    "marketplace:build": "cd ./projects/marketplace && npm run build",
+    "marketplace:preview": "cd ./projects/marketplace && npm run preview",
+    "vendor": "cd ./projects/vendor && npm run dev",
+    "vendor:build": "cd ./projects/vendor && npm run build",
+    "vendor:preview": "cd ./projects/vendor && npm run preview",
+    "test": "lerna exec -- npm run test",
+    "lint": "lerna exec -- npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.paymart.uz/shmashrabboev/marketplace"
+  },
+  "keywords": [
+    "paymart",
+    "marketplace",
+    "seller",
+    "manager"
+  ],
+  "author": "\"Solutions Lab\" Ltd",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
+    "ant-design-vue": "^3.2.5",
+    "lerna": "^5.0.0"
+  },
+  "devDependencies": {
+    "less": "^4.1.2",
+    "sass": "^1.52.2",
+    "unplugin-vue-components": "^0.19.6"
+  }
+}
